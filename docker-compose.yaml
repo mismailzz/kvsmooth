@@ -1,9 +1,17 @@
 version: "3"
 
 services:
+  redis:
+    image: redis 
+    ports:
+      - "6379:6379"
+    networks:
+      - internal-network
+
   app:
     build:
       context: .
+    restart: always 
     ports:
       - "8000:8000"
     volumes:
@@ -11,18 +19,19 @@ services:
     command: >
       sh -c "python3 manage.py migrate &&
              python3 manage.py runserver 0.0.0.0:8000"
+    links:
+      - redis
+    depends_on:
+      - redis
     networks:
       - internal-network
 
-  redis:
-    image: redis 
-    networks:
-      - internal-network
 
   celery:
     build:
       context: .  
-    command: ['celery', '-A', 'profiles_project', 'worker', '--loglevel=info']
+    restart: always
+    command: celery -A profiles_project worker --loglevel=info
     volumes:
       - ./kvsmooth:/code
     depends_on:
@@ -32,14 +41,14 @@ services:
       - internal-network
 
   flower:
-    build:
-      context: .  
-    command: ['celery', '-A', 'profiles_project', 'flower', '--port=5566', 'http://localhost:5566/']
+    image: mher/flower:0.9.7  
+    command: ['flower', '--broker=redis://redis:6379', '--port=5566']
     volumes:
       - ./kvsmooth:/code
     ports:
-      - 5555:5555
+      - 5566:5566
     depends_on:
+      - app
       - celery
       - redis
     networks:

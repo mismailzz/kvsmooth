@@ -191,7 +191,7 @@
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
                     },
-                    url: "http://127.0.0.1:8000/getInfo/HypervisorConnect/", success: function (result) {
+                    url: "http://10.11.17.200:8000/getInfo/HypervisorConnect/", success: function (result) {
                        
                         var totalCount = Object.keys(result).length;    
                         var structureDiv = "";
@@ -201,6 +201,7 @@
                             .rows( '' )
                             .remove()
                             .draw();
+            
 
                         for (var i = 0; i < totalCount; i++){
                             dt.row.add([result[i].hypervisorIP,result[i].name,result[i].operatingSystem,result[i].ipAddress,result[i].state]).draw();

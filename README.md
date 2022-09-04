@@ -1,4 +1,15 @@
 
+<br />
+<p align="center">
+
+  <h3 align="center">KvSmooth</h3>
+
+  <p align="center">
+    Patch Deployemnt for Linux Machines on ESXi VMware!
+  </p>
+</p>
+
+
 <br>
 
 ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
@@ -9,25 +20,6 @@
 ![](https://img.shields.io/badge/Contributions-Accepting-pink)
 
 <br>
-
-
-
-<br />
-<p align="center">
-
-  <h3 align="center">KvSmooth</h3>
-
-  <p align="center">
-    Patch Deployemnt for Linux Machines on ESXi VMware!
-    <br />
-    <a href="https://github.com/krvaibhaw/best-readme-template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/krvaibhaw/best-readme-template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/krvaibhaw/best-readme-template/issues">Request Feature</a>
-  </p>
-</p>
 
 
 
@@ -167,4 +159,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+mismailzz - [@LinkedIn](https://www.linkedin.com/in/muhammad-ismail-zam-zam-butt-99505398/)

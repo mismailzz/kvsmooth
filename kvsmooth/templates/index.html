@@ -72,12 +72,12 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Kvsmooth</a>
+                    <a class="navbar-brand" href="http://127.0.0.1:8000/getInfo/dashboard">Kvsmooth</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Connect</a></li>
-                    <li><a href="#">Patch</a></li>
-                    <li><a href="https://github.com/mismailzz/kvsmooth_dev">Github</a></li>
+                    <li class="active"><a href="http://127.0.0.1:8000/getInfo/dashboard">Connect</a></li>
+                    <li><a href="http://127.0.0.1:8000/patchpanel/">Patch</a></li>
+                    <li><a href="https://github.com/mismailzz/kvsmooth">Github</a></li>
                 </ul>
             </div>
         </nav>
@@ -191,7 +191,7 @@
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
                     },
-                    url: "http://10.11.17.200:8000/getInfo/HypervisorConnect/", success: function (result) {
+                    url: "http://127.0.0.1:8000/getInfo/HypervisorConnect/", success: function (result) {
                        
                         var totalCount = Object.keys(result).length;    
                         var structureDiv = "";
@@ -227,7 +227,7 @@
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
                     },
-                    url: "http://10.11.17.200:8000/getInfo/HypervisorConnect/", success: function (result) {
+                    url: "http://127.0.0.1:8000/getInfo/HypervisorConnect/", success: function (result) {
                        
                         //DELETE Request
            

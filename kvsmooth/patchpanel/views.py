@@ -75,4 +75,5 @@ def sendpatchinfo(request):
 
         #mytestceleryfunction.delay()
 
-    return render(request, 'patchpanel/patchpanel.html')
+    #return render(request, 'patchpanel/patchpanel.html')
+    return render(request, 'index.html')

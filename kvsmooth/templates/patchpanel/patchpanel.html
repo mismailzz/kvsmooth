@@ -44,17 +44,17 @@
         <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="#">Kvsmooth</a>
+              <a class="navbar-brand" href="http://127.0.0.1:8000/getInfo/dashboard">Kvsmooth</a>
             </div>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Connect</a>
+                <a class="nav-link" href="http://127.0.0.1:8000/getInfo/dashboard">Connect</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Patch</a>
+                <a class="nav-link active" href="http://127.0.0.1:8000/patchpanel/" >Patch</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">GitHub</a>
+                <a class="nav-link" href="https://github.com/mismailzz/kvsmooth">GitHub</a>
               </li>
             </ul>
           </div>
@@ -62,31 +62,7 @@
     </div>
 
 
-        
-        <div style="margin-top: 2rem;">
-          <ul>
-            <li><h5>Select nodes to run patch</h5></li>
-            <li style="float:right">
-              <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-2" id="getvminfobtn">Connect</button>
-              </div>
-            </li>
-            <li style="float:right">        
-              <div class="col-auto">
-                <input type="text" class="form-control mb-2" placeholder="192.168.xxx.xxx" id="iptogetinfo">
-                </div>      
-            </li>
-            
-          </ul>
-        </div>
-
-      
-      <div id="mytable">
-
-      </div>
-   
-
-
+      <!--PROVIDING PATCH FILE SECTION AND CREDENTIALS FOR EXECUTION-->
       <div>
         <div style="margin-top: 1rem;">
           <h5>Select script to execute on Targets</h5>
@@ -140,6 +116,32 @@
 
       </div>
 
+
+      <!--TABLE FOR SELECTING NODES-->
+      <div style="margin-top: 2rem;">
+        <ul>
+          <li><h5>Select nodes to run patch</h5></li>
+          <li style="float:right">
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-2" id="getvminfobtn">Connect</button>
+            </div>
+          </li>
+          <li style="float:right">        
+            <div class="col-auto">
+              <input type="text" class="form-control mb-2" placeholder="192.168.xxx.xxx" id="iptogetinfo">
+              </div>      
+          </li>
+          
+        </ul>
+      </div>
+
+    
+    <div id="mytable">
+
+    </div>
+
+
+    <div style="margin-top: 2rem;"></div> <!--JUST TO MOVE TABLE UPWARD-->
       <!--container end-->
       
 
@@ -209,7 +211,7 @@
       $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: "http://10.11.17.200:8000/getInfo/HypervisorConnect/", success: function (result) {
+        url: "http://127.0.0.1:8000/getInfo/HypervisorConnect/", success: function (result) {
           
             var totalCount = Object.keys(result).length;    
             var structureDiv = "";
@@ -287,7 +289,7 @@
     $.ajax({
       type: 'GET',
       dataType: 'json',
-      url: "http://10.11.17.200:8000/patchpanel/getpatchInfo/", success: function (result) {
+      url: "http://127.0.0.1:8000/patchpanel/getpatchInfo/", success: function (result) {
         
           var totalCount = Object.keys(result).length;    
           var structureDiv2 = '<option selected></option>';

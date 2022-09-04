@@ -1,0 +1,1 @@
+/usr/bin/yum clean all >> /tmp/report

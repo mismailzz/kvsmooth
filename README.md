@@ -53,8 +53,6 @@
 
 ## About The Project
 
-[![Product Name Screen Shot](preview/preview.png)](https://example.com)
-
 KvSmooth comes to end with the idea of automating the tasks and getting the development knowledge of three-tier architechure applications. We also covered how the RESTFUL API framework works when we have to design the microservices architecture. Due to this, in the first place, the development was in the direction of Monolithic architecture and then gradually we move towards the Microservices architecture.
 
 The problem that was selected for this learning is based on the real-world problem when we have to execute the script like bash etc on the Linux servers that are running over VMware ESXi hosts. We do have the solution of ansible or might be another CLI approach but it becomes user-friendly when we have the User Interface to deal with such tasks. By making the process smooth, we have given the name of KvSmooth.

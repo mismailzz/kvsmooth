@@ -108,7 +108,17 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    docker-compose up
    ```
-   
+ 4. Results 
+  
+
+  <h4>Main Dashboard</h4>
+  <img align="left" src="https://github.com/mismailzz/kvsmooth/blob/main/githubpics/dashboard_1.PNG">
+
+
+  <h4>PatchPanel Dashboard</h4>
+  <img align="left" src="https://github.com/mismailzz/kvsmooth/blob/main/githubpics/dashboard_2.PNG">
+
+  
 <!-- ROADMAP -->
 
 ## Roadmap

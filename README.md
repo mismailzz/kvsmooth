@@ -104,7 +104,7 @@ To get a local copy up and running follow these simple example steps.
    ```
 3. Run the docker-compose file
    ```sh
-   docker-compose up
+   SERVER_IP=10.11.17.200 docker-compose up ##SERVER_IP=<ip_addr> docker-compose up
    ```
  4. Results 
   

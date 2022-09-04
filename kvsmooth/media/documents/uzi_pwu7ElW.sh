@@ -1,1 +1,0 @@
-/usr/bin/sudo echo "HELLO" > /tmp/uzi

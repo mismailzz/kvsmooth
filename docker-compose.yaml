@@ -18,7 +18,9 @@ services:
     volumes:
       - ./kvsmooth:/code
     command: >
-      sh -c "python3 manage.py migrate &&
+      sh -c "sed -i 's/127.0.0.1/${SERVER_IP}/g' templates/index.html &&
+             sed -i 's/127.0.0.1/${SERVER_IP}/g' templates/patchpanel/patchpanel.html &&
+             python3 manage.py migrate &&
              python3 manage.py runserver 0.0.0.0:8000"
     links:
       - redis
